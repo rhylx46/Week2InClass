@@ -24,6 +24,8 @@
                     for (let i = 0; i < xhrObjectResponse.events.length; i++) {
                         let currentEvent = document.getElementById(`event${i}`);
                         currentEvent.innerHTML = `<div>Location: ${xhrObjectResponse.events[i].location}
+                                                   <br> Date: ${xhrObjectResponse.events[i].date}
+                                                   <br> Map: ${xhrObjectResponse.events[i].map}
                             
                             </div>`;
                     }
