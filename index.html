@@ -19,6 +19,12 @@
                     // addText.innerHTML = xhr.responseText;
                     xhrObjectResponse = JSON.parse(xhr.responseText);
                     console.log(xhrObjectResponse);
+                    for (let i = 0; i < xhrObjectResponse.events.length; i++) {
+                        let currentEvent = document.getElementById(`event${i}`);
+                        currentEvent.innerHTML = `<div>Location: ${xhrObjectResponse.events[i].location}
+                            
+                            </div>`;
+                    }
                 }
             };
 
