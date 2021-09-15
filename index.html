@@ -5,9 +5,10 @@
 
     <body>
         Class Example Week 2
+
         <div id="event0"></div>
         <div id="event1"></div>
-        
+
         <div id="add-text"></div>
 
         <script type="text/javascript">
@@ -18,16 +19,14 @@
             xhr.onload = function() {
                 if (xhr.status === 200) {
                     console.log(xhr.responseText);
-                    // addText.innerHTML = xhr.responseText;
                     xhrObjectResponse = JSON.parse(xhr.responseText);
                     console.log(xhrObjectResponse);
                     for (let i = 0; i < xhrObjectResponse.events.length; i++) {
                         let currentEvent = document.getElementById(`event${i}`);
                         currentEvent.innerHTML = `<div>Location: ${xhrObjectResponse.events[i].location}
-                                                   <br> Date: ${xhrObjectResponse.events[i].date}
-                                                   <br> Map: ${xhrObjectResponse.events[i].map}
-                            
-                            </div>`;
+                           <br> Date: ${xhrObjectResponse.events[i].date}
+                           <br> Map:<br> <img src="${xhrObjectResponse.events[i].map}" alt="img${i}" />
+                        </div>`;
                     }
                 }
             };
