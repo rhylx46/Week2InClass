@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        Class Example Week 2
+
+        <div id="add-text"></div>
+
+        <script type="text/javascript">
+            let xhr = new XMLHttpRequest;
+            let addText = document.getElementById("add-text");
+            let xhrObjectResponse;
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    // addText.innerHTML = xhr.responseText;
+                    xhrObjectResponse = JSON.parse(xhr.responseText);
+                    console.log(xhrObjectResponse);
+                }
+            };
+
+            xhr.open("GET", "test.json", true);
+            xhr.send();
+        
+        </script>
+
+    </body>
+
+</html>

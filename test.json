@@ -1,0 +1,16 @@
+{
+    "events": [
+        {
+            "location": "Windsor, ON",
+            "date": "Sept 13th, 2021",
+            "map": "img/windsor.jpg"
+        },
+
+        {
+            "location": "London, ON",
+            "date": "Sept 12th, 2021",
+            "map": "img/london.jpg"
+        }
+
+    ]
+}
